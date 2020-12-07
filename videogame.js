@@ -8,12 +8,22 @@ class Player {
     }
     
     // getter
-    get hp () {
+    get numHp () {
+         
+    }
+
+    // setter 
+    set numHp () {
+        
+    }
+
+    // getter (Terrils part)
+    get numEn () {
 
     }
 
-    // setter
-    set hp () {
+    // setter (Terrils part)
+    set numEn () {
         
     }
   }
