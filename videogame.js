@@ -5,6 +5,16 @@ class Player {
       this.health = health;
       this.energy = energy;
       this.armor = armor;
+
+      this.setup();
+    }
+
+    setup () {
+      //setup the private variables
+      this._hp = this.health;
+      this._en = this.energy / 2;
+      this._maxEn = this.energy;
+      this._maxHp = this.health;
     }
     
     // getter
@@ -19,12 +29,12 @@ class Player {
 
     // getter (Terrils part)
     get numEn () {
-
+      return this._en;
     }
 
     // setter (Terrils part)
-    set numEn () {
-        
+    set numEn ( number ) {
+      this._en = ( number > this._maxEn ) ? this._maxEn : number;
     }
   }
   
